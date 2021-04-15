@@ -1,0 +1,10 @@
+
+{% for translate in object_list %}
+<p>
+  <a href="{% url 'translate:detail' translate.pk %}">{{ translate.text }} </a>
+</p>
+{% empty %}
+テキストがありません
+{% endfor %}
+
+<div><a href="{% url 'translate:create' %}">テキストを作成する</a></div>
